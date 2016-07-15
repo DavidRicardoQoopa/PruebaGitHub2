@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Chronometer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +27,14 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    public void startChronometer(View view) {
+        ((Chronometer) findViewById(R.id.chronometer1)).start();
+    }
+
+    public void stopChronometer(View view) {
+        ((Chronometer) findViewById(R.id.chronometer1)).stop();
     }
 
     @Override
